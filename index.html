@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cocktail Recipe</title>
+        <style>
+            img{
+                height: 200px;
+                width: 200px;
+            }
+            select:hover{
+                background-color:black;
+            }
+            .main{
+                display:flex;
+            }
+            .submain{
+                margin: 20px; 
+                border-style: dotted;
+                padding: 15px;
+                background-color: black;
+            }
+            li{
+                border-style: solid;
+                padding: 5px;
+            }
+            li:hover{
+                background-color: chocolate;
+            }
+            h1,h2{
+                color: goldenrod;
+            }
+        </style>
+     </head>
+     <body>
+        <div class="main">
+            <div class="submain">
+
+    <h1>Cocktail Recipe</h1>
+     <h2>The picture of a sample of a Cocktail</h2>
+     <img src="https://unsplash.com/photos/two-glasses-filled-with-orange-juice-and-limes-1FDG58bFZM4">
+
+     <h3>Pick an Item</h3>
+     
+     <select onchange="addOrder()"
+    id="select">
+    <option selected >Select Options</option>
+
+     <option value="Apple">Apple</option>
+     <option value="Mango">Mango</option>
+      <option value="Strawberry">Strawberry</option>
+      <option value="Banana">Banana</option>
+      <option value="Passion">Passion</option>
+      <option value ="Pineapple">Pineapple</option>
+   </select>
+  </div> 
+
+   <div class="submain">
+     <h2>Order List</h2>
+     <p id="list">This is your list:</p>
+       </div>
+     </div>
+     <script>
+        function addOrder(){
+            var cocktail =document.getElementById
+            ("select")
+            var juice =cocktail.option[cocktail.selectedIndex].value
+            var list_cocktails=document.getElementById('list')
+            list_cocktails.insertAdjacentHTML("beforeend",'cocktails')
+        }
+     </script>
+     </body>
+</html>
