@@ -36,3 +36,16 @@ body {
     color:black;
     border-bottom: 1.5px solid #1f194c; 
 }
+.search-container input  focus{
+    border-color: aqua;  
+  }
+  .search-container button {
+  font-size: 1em; 
+  border-radius: 2em;
+  background-color:aqua;
+  border: none;
+  outline: none;
+  color: white;    
+  }
+  
+  
