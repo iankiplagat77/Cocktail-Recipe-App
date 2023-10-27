@@ -10,9 +10,8 @@ body {
     background:linear-gradient(#5372f0 50%,#000000
   50%);
 }
-.container{
+.search{
     position: absolute;
-    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     width: 90vw;
@@ -20,7 +19,6 @@ body {
     background-color: black;
     padding: 2.0em;
     border-radius: 1.0em;
-    box-shadow: 0 1em 3em rgba(2, 9, 38, 0.25);
 }
 .search-image{
     display: grid;

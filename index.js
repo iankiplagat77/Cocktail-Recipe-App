@@ -1,11 +1,12 @@
-let result = document.getElementById("results")
+function search (){
+    let result = document.getElementById("result")
 let searchBtn = document.getElementById("search-btn")
 let userInp = document.getElementById("user-inp").value;
 if (userInp.length ==0) {
     result.innerHTML =`<h3 class="msg">The input field cannot be empty</h3>`;
 }
 else{
-    fetch('www.thecocktaildb.com/api/json/v1/1/search.php?f=a')
+    fetch('https://thecocktaildb.com/api/json/v1/1/search.php?s='+ userInp)
     
     .then(response =>response.json())
     .then((data) => {
@@ -28,7 +29,7 @@ else{
                     measure ="";
                 }
                 count += 1;
-                ingredients.push(`$(measure) $(ingredient)`);
+                ingredients.push(`${measure} ${ingredient}`);
             }
         }
         console.log(ingredients);
@@ -36,18 +37,16 @@ else{
        <img src=${myDrink.strDrinkThumb}>
         <h2>${myDrink.strDrink}</h2>
         <h3>Ingredients:</h3>
-        <ul class="Ingredients"></ul>
+        <ul id="ingredients"></ul>
         <h3>Instructions:</h3>
         <P>${myDrink.strInstructions}</p>
         `;
-        let ingredientsCon =document.querySelector("ingredients");
+        let ingredientsCon =document.getElementById("ingredients");
         ingredients.forEach((item) =>{
             let listItem =document.createElement("li");
             listItem.innerText = item;
             ingredientsCon.appendChild(listItem);
         });
 
-     }).catch(()=>{
-        result.innerHTML =`<h3 class="msg">Please enter a valid input</h3>`;
      })
-}
+}}
