@@ -36,6 +36,9 @@ else{
         result.innerHTML=` 
        <img src=${myDrink.strDrinkThumb}>
         <h2>${myDrink.strDrink}</h2>
+        <h3>Ingredients:</h3>
+        <ul id="ingredients"></ul>
+        <h3>Instructions:</h3>
         <P>${myDrink.strInstructions}</p>
         `;
         let ingredientsCon =document.getElementById("ingredients");
