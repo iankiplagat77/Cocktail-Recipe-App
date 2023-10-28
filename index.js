@@ -32,7 +32,7 @@ else{
                 ingredients.push(`${measure} ${ingredient}`);
             }
         }
-        console.log(ingredients);
+        
         result.innerHTML=` 
        <img src=${myDrink.strDrinkThumb}>
        <h2>${myDrink.strDrink}</h2>
